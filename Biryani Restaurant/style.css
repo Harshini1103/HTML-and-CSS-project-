@@ -1,0 +1,386 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --prime:#FAEDCE;
+    --white:#E0E5B6;
+    --text:#141206;
+}
+body
+    {
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url('./images/');
+    
+    }
+    
+header{
+    width: 100%;
+    height:80px;
+    background-color:#E0E5B6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:5px 34px;
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        margin:0 15px;
+        width: 50%;
+        font-weight: bold;
+        font-size:20px;
+        logo{
+            font-size:30px;
+        }
+        
+    }
+    a{
+        color: black;
+        text-decoration:none ;
+    }
+
+.profile{
+    
+    a{background: red;
+        color: white;
+        border: none;
+        padding: 10px;
+        font: inherit;
+        font-size: 1.6rem;
+        cursor: pointer;
+        outline: inherit;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px #000;
+
+    }
+    
+      
+   
+}
+
+    }
+    .menubutton
+    {
+        background:black;
+        color: white;
+        border: none;
+        padding: 10px;
+        font: inherit;
+        text-decoration: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+        outline: inherit;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px #000;
+
+    }
+
+#showcase{
+    height: 500px;
+}
+.showcase-area {
+    height: 50vh;
+    background: linear-gradient(rgba(240, 240, 240, 0.144),
+            rgba(255, 255, 255, 0.336)),
+        url("./images/Dindigul\ Biryani.webp");
+        background-position: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+    row-gap: 20px;
+}
+/* ..........////Food category///........... */
+
+#food-menu{
+    background-color: whitesmoke;
+    padding-top: 30px;
+}
+
+#food {
+    padding: 5rem 0 10rem 0;
+}
+
+#food h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+}
+
+.food-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+.food-container img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;
+}
+
+.img-container {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.img-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content h3 {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.img-content a {
+    font-size: 1.2rem;
+}
+.img-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    opacity: 0;
+    z-index: 1;
+
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.img-container:hover .img-content {
+    opacity: 1;
+    top: 40%;
+}
+
+.active
+{
+    border-bottom: 5px solid black;
+}
+
+.food-menu-heading {
+    text-align: center;
+    font-size: 3.4rem;
+    color: black;
+    font-weight: 700;
+}
+
+.food-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+}
+
+.food-menu-container img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.food-menu-item {
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+.food-description {
+    margin: auto 1.5rem;
+}
+
+.font-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #444;
+}
+
+.food-description p {
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.food-description .food-price {
+    color: #117964;
+    font-weight: 700;
+}
+
+
+/* ........ Contact Us........... */
+#contact {
+    padding: 5rem 0;
+    background:var(--text);
+}
+
+.contact-container {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.contact-img {
+    width: 50%;
+}
+
+.contact-img img {
+    display: block;
+    height: 420px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.form-container {
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.form-container input {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color:#444;
+    font-weight: 500;
+    background: whitesmoke;
+    padding-left: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+    background: whitesmoke;
+    padding-left: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    color: #444;
+    outline: none;
+    resize: none;
+}
+
+.form-container h2 {
+    font-size: 2.7rem;
+    color:black;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: -1.2rem;
+}
+
+.form-container a {
+    font-size: 1.3rem;
+}
+.services
+{
+    height: 50vh;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+footer{
+    width: 100%;
+    padding: 20px 30px;
+    background-color: grey;
+
+
+}
+.footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   
+}
+.one{
+   text-align: center;
+
+}
+h4{
+    color: #141206;
+    margin:25px ;
+    font-size:20px; 
+}
+p{
+    color:black;
+    margin:0  20px;
+    
+}
+ .one i{
+   cursor:pointer;
+   margin-left: 10px;
+
+}.one i:hover{
+    color: blue;
+}
+
+.copy{
+    position:static;  
+    left: 10px;  
+    bottom: 5px;  
+    right: 10px;   
+    width: 100%;  
+    background-color:grey;  
+    color: white;  
+    text-align: center;  
+}
+
+
+
+
